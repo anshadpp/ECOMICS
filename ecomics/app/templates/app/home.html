@@ -1,0 +1,83 @@
+    {% extends 'app/base.html' %}
+    {% load static %}
+    {% block title %}Home{% endblock title %}
+
+    {% block banner-slider %}
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'app/images/mha.png' %}" class="d-block w-100 " alt="banner image">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'app/images/dn.png' %}" class="d-block w-100" alt="banner image">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'app/images/s.png' %}" class="d-block w-100" alt="banner image">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'app/images/ds.png' %}" class="d-block w-100" alt="banner image">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    {% endblock banner-slider %}
+    {% block information %}
+
+        <div class="containers">
+            <div class="row bg-success text-center p-5 text-white border-bottom shadow">
+                <h1>Comics</h1>
+                <small class="fs-5">Comics is a medium used to express ideas with images, often combined with text or other visual information.It typically takes the form of a sequence of panels of images. Textual devices such as speech balloons, captions, and onomatopoeia can indicate dialogue, narration, sound effects, or other information. There is no consensus amongst theorists and historians on a definition of comics; some emphasize the combination of images and text, some sequentiality or other image relations, and others historical aspects such as mass reproduction or the use of recurring characters. Cartooning and other forms of illustration are the most common image-making means in comics; fumetti is a form that uses photographic images. Common forms include comic strips, editorial and gag cartoons, and comic books. Since the late 20th century, bound volumes such as graphic novels, comic albums, and tankōbon have become increasingly common, while online webcomics have proliferated in the 21st century. </small>
+            </div>
+        </div>
+    {% endblock information %}
+
+    {% block main-content %}
+        <div class="container">
+            <h1 class="text-center">Types</h1>
+            <br><br>
+            <div class="row container">
+                <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animated-duration: 1s; animated-delay: 0.6s; animated-name: none;">
+                    <div class="goodnesssec trending smbg">
+                        <a href="{% url 'category' 'DR' %}">
+                            <div class="goodnesssec text-center">
+                                <img src="{% static 'app/images/dr.png' %}" class="img-responsive center-block" alt="">
+                                <p class="mlkpro">Drama</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animated-duration: 1s; animated-delay: 0.6s; animated-name: none;">
+                    <div class="goodnesssec trending smbb">
+                        <a href="{% url 'category' 'AC' %}">
+                            <div class="goodnesssec text-center">
+                                <img src="{% static 'app/images/ac.png' %}" class="img-responsive center-block" alt="">
+                                <p class="mlkpro">Action</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animated-duration: 1s; animated-delay: 0.6s; animated-name: none;">
+                    <div class="goodnesssec trending smba">
+                        <a href="{% url 'category' 'CM' %}">
+                            <div class="goodnesssec text-center">
+                                <img src="{% static 'app/images/cm.png' %}" class="img-responsive center-block" alt="">
+                                <p class="mlkpro">Comedy</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br/><br/>
+
+    {% endblock main-content %}
